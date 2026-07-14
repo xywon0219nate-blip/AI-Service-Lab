@@ -1,0 +1,206 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	background: #f8fafc;
+	color: #0f172a;
+}
+
+/* 화면 전체를 가운데 정렬하는 배경 영역 */
+.dashboard {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 48px;
+}
+
+/* 카드(Card) 형태의 메인 박스 */
+.hero-card {
+	width: 100%;
+	max-width: 680px;
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 28px;
+	padding: 56px;
+	box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+	text-align: center;
+}
+
+.badge {
+	display: inline-block;
+	margin: 0 0 16px;
+	padding: 8px 16px;
+	border-radius: 999px;
+	background: #dbeafe;
+	color: #2563eb;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 40px;
+	letter-spacing: -0.04em;
+}
+
+.description {
+	max-width: 480px;
+	margin: 20px auto 40px;
+	color: #64748b;
+	font-size: 18px;
+	line-height: 1.7;
+}
+
+/* 입력폼 전체 영역 */
+.predict-form {
+	text-align: left;
+}
+
+/* 입력 항목들을 2열로 배치하는 그리드 */
+.input-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+	margin-bottom: 32px;
+}
+
+/* 입력 항목 하나 (라벨 + input/select) */
+.input-item {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	font-size: 14px;
+	color: #475569;
+	font-weight: 600;
+}
+
+.input-item input,
+.input-item select {
+	padding: 12px 14px;
+	border-radius: 12px;
+	border: 1px solid #e5e7eb;
+	font-size: 15px;
+	color: #0f172a;
+	outline: none;
+	background: #ffffff;
+	font-family: inherit;
+}
+
+.input-item input:focus,
+.input-item select:focus {
+	border-color: #2563eb;
+}
+
+.primary-button {
+	width: 100%;
+	border: none;
+	border-radius: 14px;
+	background: #2563eb;
+	color: white;
+	padding: 16px 28px;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.primary-button:hover {
+	background: #1d4ed8;
+}
+
+.primary-button:disabled {
+	background: #93c5fd;
+	cursor: not-allowed;
+}
+
+/* 에러 메시지 스타일 */
+.error-message {
+	margin-top: 24px;
+	padding: 16px;
+	border-radius: 14px;
+	background: #fef2f2;
+	border: 1px solid #fecaca;
+	color: #dc2626;
+	font-weight: 600;
+}
+
+/* 예측 결과 카드 스타일 (기본: Stay) */
+.result-card {
+	margin-top: 24px;
+	padding: 24px;
+	border-radius: 20px;
+	background: #f0f9ff;
+	border: 1px solid #bae6fd;
+}
+
+.result-label {
+	margin: 0 0 8px;
+	color: #0369a1;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.result-value {
+	margin: 0;
+	color: #0c4a6e;
+	font-size: 40px;
+	font-weight: 800;
+}
+
+.result-sub {
+	margin: 8px 0 0;
+	color: #0369a1;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+/* 이탈(Churn) 예측일 때는 경고 색상으로 강조 */
+.result-card.result-churn {
+	background: #fef2f2;
+	border-color: #fecaca;
+}
+
+.result-card.result-churn .result-label,
+.result-card.result-churn .result-sub {
+	color: #b91c1c;
+}
+
+.result-card.result-churn .result-value {
+	color: #991b1b;
+}
+
+/* 잔류(Stay) 예측일 때는 안정적인 색상으로 강조 */
+.result-card.result-stay {
+	background: #f0fdf4;
+	border-color: #bbf7d0;
+}
+
+.result-card.result-stay .result-label,
+.result-card.result-stay .result-sub {
+	color: #15803d;
+}
+
+.result-card.result-stay .result-value {
+	color: #14532d;
+}
+
+@media (max-width: 560px) {
+	.dashboard {
+		padding: 24px;
+	}
+
+	.hero-card {
+		padding: 32px;
+	}
+
+	.input-grid {
+		grid-template-columns: 1fr;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+}

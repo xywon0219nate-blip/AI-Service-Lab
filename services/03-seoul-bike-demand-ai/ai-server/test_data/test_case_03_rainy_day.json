@@ -1,0 +1,14 @@
+{
+    "hour": 10,
+    "temperature": 15.4,
+    "humidity": 97,
+    "wind_speed": 0.6,
+    "visibility": 374,
+    "dew_point": 14.9,
+    "solar_radiation": 0.38,
+    "rainfall": 1.5,
+    "snowfall": 0.0,
+    "season": "Spring",
+    "holiday": "No Holiday",
+    "functioning_day": "Yes"
+}

@@ -1,0 +1,42 @@
+{
+  "project": "04-card-fraud-ai",
+  "service_name": "Card Fraud Detection AI",
+  "dataset": "PaySim",
+  "data_file": "paysim.csv",
+  "model_name": "Random Forest (balanced)",
+  "model_version": "1.0.0",
+  "target": "isFraud",
+  "input_features": [
+    "type",
+    "amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "Hour"
+  ],
+  "engineered_features": [
+    "TimeOfDay",
+    "AmountLog",
+    "AmountToSenderBalance",
+    "AmountToReceiverBalance",
+    "SenderBalanceAfterEstimated",
+    "ReceiverBalanceAfterEstimated",
+    "IsSenderBalanceZero",
+    "IsLargeTransaction",
+    "IsTransfer",
+    "IsCashOut",
+    "BalanceDifference"
+  ],
+  "threshold": 0.5,
+  "metrics": {
+    "accuracy": 0.999993,
+    "precision": 0.996959,
+    "recall": 0.997565,
+    "f1": 0.997262,
+    "roc_auc": 0.999845,
+    "pr_auc": 0.998583
+  },
+  "train_rows": 5090096,
+  "test_rows": 1272524,
+  "fraud_ratio_percent": 0.129082,
+  "random_state": 42
+}

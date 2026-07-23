@@ -1,0 +1,17 @@
+{
+  "project": "05-movie-recommendation-ai",
+  "service_name": "Movie Recommendation AI",
+  "dataset": "MovieLens 100K",
+  "model_name": "Item-Based Collaborative Filtering + Content-Based(Genre) Fallback",
+  "model_version": "1.0.0",
+  "primary_algorithm": "item_based_collaborative_filtering",
+  "fallback_algorithm": "content_based_genre_similarity",
+  "min_rating_count_for_cf": 20,
+  "popularity_min_votes_m": 43.0,
+  "popularity_global_mean_C": 3.076,
+  "default_top_n": 10,
+  "num_users": 943,
+  "num_movies": 1682,
+  "num_ratings": 100000,
+  "num_movies_in_cf_matrix": 939
+}

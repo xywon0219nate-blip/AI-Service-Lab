@@ -1,0 +1,13 @@
+{
+  "project": "06-movie-recommendation-ai",
+  "service_name": "Movie Recommendation AI (Basic)",
+  "dataset": "MovieLens (movies.csv / ratings.csv)",
+  "model_name": "Content-Based Genre Cosine Similarity",
+  "model_version": "1.0.0",
+  "primary_algorithm": "content_based_genre_cosine_similarity",
+  "min_rating_count": 10,
+  "default_top_n": 10,
+  "num_movies": 9742,
+  "num_ratings": 100836,
+  "num_genre_features": 20
+}

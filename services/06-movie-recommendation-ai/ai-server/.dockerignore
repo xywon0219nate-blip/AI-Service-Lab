@@ -2,6 +2,7 @@
 __pycache__
 *.pyc
 models/*.pkl
+models_basic/*.pkl
 data/ml-100k
 data/*.zip
 fe/.ipynb_checkpoints

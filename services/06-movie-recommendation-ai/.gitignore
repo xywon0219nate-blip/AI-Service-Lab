@@ -10,6 +10,7 @@ ai-server/data/*.zip
 # model_info.json은 용량이 작고 통계 정보만 담고 있어 Git에 유지한다.
 # ===========================
 ai-server/models/*.pkl
+ai-server/models_basic/*.pkl
 
 # ===========================
 # Python
